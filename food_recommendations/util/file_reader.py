@@ -39,11 +39,11 @@ def read_graph_from_file(filename):
                 )
             elif index == 1:
                 for vertex in line.split(';'):
-                    vertex_id, sweetness, saltiness, savoriness = vertex.split(", ")
+                    vertex_id, sweetness, saltiness, savoriness, num_stars = vertex.split(", ")
                     if vertex_id == "":
                         continue
                     else:
-                        graph_obj.add_vertex(vertex_id, sweetness, saltiness, savoriness)
+                        graph_obj.add_vertex(vertex_id, sweetness, saltiness, savoriness, num_stars)
             else:
                 if line == "":
                     continue

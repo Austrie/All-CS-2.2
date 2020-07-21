@@ -73,7 +73,7 @@ class Graph:
         self.__lat = lat
         self.__lng = lng
 
-    def add_vertex(self, vertex_id, sweetness, saltiness, savoriness):
+    def add_vertex(self, vertex_id, sweetness, saltiness, savoriness, num_stars):
         """
         Add a new vertex object to the graph with the given key and return the vertex.
         
@@ -83,7 +83,7 @@ class Graph:
         Returns:
         Vertex: The new vertex object.
         """
-        new_vertex = Vertex(vertex_id, sweetness, saltiness, savoriness)
+        new_vertex = Vertex(vertex_id, sweetness, saltiness, savoriness, num_stars)
         self.__vertex_dict[vertex_id] = new_vertex
         return new_vertex
         
